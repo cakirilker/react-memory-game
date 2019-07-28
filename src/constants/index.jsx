@@ -1,0 +1,7 @@
+export const SET_USERNAME = "SET_USERNAME";
+export const START_GAME = "START_GAME";
+export const FLIP_TILE = "FLIP_TILE";
+export const TOGGLE_WAITING = "TOGGLE_WAITING";
+export const CHECK_MATCH = "CHECK_MATCH";
+export const INCREMENT_TRIES = "INCREMENT_TRIES";
+export const ADD_USER_SCOREBOARD = "ADD_USER_SCOREBOARD";

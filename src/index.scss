@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+body {
+  margin: 0;
+  font-family: "VT323", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    monospace;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-image: url("/assets/img/stars-background.png");
+  background-size: 400px;
+  background-repeat: round;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.tile {
+  float: left;
+  padding-bottom: 25%;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  width: 25%;
+  &-front {
+    background-image: url("/assets/img/deck.png");
+    background-size: cover;
+    cursor: pointer;
+    border: 1;
+    border-width: 3px !important;
+    border-color: white !important;
+  }
+
+  &-back {
+    -webkit-transform: rotateX(-180deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    border: 0;
+    background-color: white;
+    transform: rotateX(-180deg);
+  }
+
+  &-front,
+  &-back {
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    border: 1px solid #888;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: transform 0.3s;
+    width: 100%;
+  }
+  &.flipped {
+    & .tile-front {
+      -webkit-transform: rotateX(-180deg);
+      transform: rotateX(-180deg);
+    }
+
+    & .tile-back {
+      -webkit-transform: rotateX(0);
+      transform: rotateX(0);
+    }
+  }
+}
+.tile-board-container {
+  @media screen and (min-width: 768px) {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+.text-color-star-wars {
+  color: #feda4a;
+}
