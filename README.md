@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). A memory game example made with React & Redux.
+[Click here to view demo app](https://react-memory-game-ilker.herokuapp.com/)
 
 ## Available Scripts
 
